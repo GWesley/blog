@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gwesley.tk/"/>
-  <updated>2016-12-20T07:56:04.000Z</updated>
+  <updated>2016-12-20T07:57:52.000Z</updated>
   <id>http://gwesley.tk/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://gwesley.tk/2016/12/20/nscalendar_addition/"/>
     <id>http://gwesley.tk/2016/12/20/nscalendar_addition/</id>
     <published>2016-12-20T07:53:14.000Z</published>
-    <updated>2016-12-20T07:56:04.000Z</updated>
+    <updated>2016-12-20T07:57:52.000Z</updated>
     
     <content type="html"><![CDATA[<p><em>日期.</em> 一个很普通的时间和它的实现间往往有着巨大的差异，里面隐藏的多方面的复杂性远超其它数据类型。其中包括亚秒级的精度，重叠单元，不同地理位置的时区边界，语言和语法上的本地化差异，以及为了夏令时的转换和闰年调整，而在标准时间中添加删除整块的时间等等，里面有太多的东西需要进行处理。</p>
 <p>在开始进行任何重度日期相关的任务前，我们有必要深入了解一下我们手中已有的工具。相比写上上千个版本的 <code>dateIsTomorrow</code>，我觉得更好的办法是使用 <code>Foundation</code> 方法。你有在用 <code>NSDateComponents</code> 吗？你有指定正确的日历单元吗？你的代码在 2100 年 2 月 28 号还能正常工作么？</p>
@@ -226,7 +226,7 @@
     </summary>
     
     
-      <category term="other" scheme="http://gwesley.tk/tags/other/"/>
+      <category term="iOS" scheme="http://gwesley.tk/tags/iOS/"/>
     
   </entry>
   
@@ -271,35 +271,6 @@
     
     
       <category term="iOS" scheme="http://gwesley.tk/tags/iOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://gwesley.tk/2016/12/20/hello-world/"/>
-    <id>http://gwesley.tk/2016/12/20/hello-world/</id>
-    <published>2016-12-20T02:55:21.000Z</published>
-    <updated>2016-12-20T06:36:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
-    
-      <category term="other" scheme="http://gwesley.tk/tags/other/"/>
     
   </entry>
   
