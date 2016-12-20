@@ -6,24 +6,39 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://gwesley.tk">
-  <title>Test Post | Hexo</title>
+  <title>Unexpected precedence issues with try? and as? | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Usage: hexo generate 
-Description:Generate static files.
-Options:  -d, –deploy  Deploy after generated  -f, –force   Force regenerate  -w, –watch   Watch file changes">
+  <meta name="description" content="Tim Vermeulen recently wrote on the Swift Evolution list that try? precedence can be unexpected:
+if let int = try? mightReturnInt() as? Int {
+
+ print(int) // =&amp;gt; Optional(3)
+
+}
+
+Specifically, he dis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Test Post">
+<meta property="og:title" content="Unexpected precedence issues with try? and as?">
 <meta property="og:url" content="http://gwesley.tk/2016/12/20/test/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Usage: hexo generate 
-Description:Generate static files.
-Options:  -d, –deploy  Deploy after generated  -f, –force   Force regenerate  -w, –watch   Watch file changes">
-<meta property="og:updated_time" content="2016-12-20T06:21:45.000Z">
+<meta property="og:description" content="Tim Vermeulen recently wrote on the Swift Evolution list that try? precedence can be unexpected:
+if let int = try? mightReturnInt() as? Int {
+
+ print(int) // =&amp;gt; Optional(3)
+
+}
+
+Specifically, he dis">
+<meta property="og:updated_time" content="2016-12-20T07:42:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Test Post">
-<meta name="twitter:description" content="Usage: hexo generate 
-Description:Generate static files.
-Options:  -d, –deploy  Deploy after generated  -f, –force   Force regenerate  -w, –watch   Watch file changes">
+<meta name="twitter:title" content="Unexpected precedence issues with try? and as?">
+<meta name="twitter:description" content="Tim Vermeulen recently wrote on the Swift Evolution list that try? precedence can be unexpected:
+if let int = try? mightReturnInt() as? Int {
+
+ print(int) // =&amp;gt; Optional(3)
+
+}
+
+Specifically, he dis">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -57,9 +72,11 @@ Options:  -d, –deploy  Deploy after generated  -f, –force   Force regenerate
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">主页</a></li>
+				<li><a href="/">Home</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/iOS">iOS</a></li>
+	        
+				<li><a href="/tags/other">other</a></li>
 	        
 			</ul>
 		</nav>
@@ -89,7 +106,7 @@ Options:  -d, –deploy  Deploy after generated  -f, –force   Force regenerate
 		        
 					<a class="weibo" target="_blank" href="https://weibo.com/gwesley" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:zzycn2012@gmail.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -117,9 +134,11 @@ Options:  -d, –deploy  Deploy after generated  -f, –force   Force regenerate
 			<nav class="header-menu">
 				<ul>
 				
-					<li><a href="/">主页</a></li>
+					<li><a href="/">Home</a></li>
 		        
-					<li><a href="/tags/随笔/">随笔</a></li>
+					<li><a href="/tags/iOS">iOS</a></li>
+		        
+					<li><a href="/tags/other">other</a></li>
 		        
 		        
 		        	<li><a href="/archives/">所有文章</a></li>
@@ -133,7 +152,7 @@ Options:  -d, –deploy  Deploy after generated  -f, –force   Force regenerate
 			        
 						<a class="weibo" target="_blank" href="https://weibo.com/gwesley" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:zzycn2012@gmail.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -156,7 +175,7 @@ Options:  -d, –deploy  Deploy after generated  -f, –force   Force regenerate
         
   
     <h1 class="article-title" itemprop="name">
-      Test Post
+      Unexpected precedence issues with try? and as?
     </h1>
   
 
@@ -167,9 +186,29 @@ Options:  -d, –deploy  Deploy after generated  -f, –force   Force regenerate
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Usage: hexo generate </p>
-<p>Description:<br>Generate static files.</p>
-<p>Options:<br>  -d, –deploy  Deploy after generated<br>  -f, –force   Force regenerate<br>  -w, –watch   Watch file changes</p>
+        <p>Tim Vermeulen recently wrote on the Swift Evolution list that try? precedence can be unexpected:</p>
+<pre><code class="swift"><span class="keyword">if</span> <span class="keyword">let</span> int = <span class="keyword">try</span>? mightReturnInt() <span class="keyword">as</span>? <span class="type">Int</span> {
+
+ <span class="built_in">print</span>(int) <span class="comment">// =&gt; Optional(3)</span>
+
+}
+</code></pre>
+<p>Specifically, he discovered that try?’s precedence is lower than as?’s precedence, so you may have to add parentheses to get the right result.</p>
+<pre><code class="swift"><span class="keyword">if</span> <span class="keyword">let</span> int = (<span class="keyword">try</span>? mightReturnInt()) <span class="keyword">as</span>? <span class="type">Int</span> {
+    <span class="built_in">print</span>(int) <span class="comment">// =&gt; 3</span>
+}
+</code></pre>
+<p>He also found a similar issue with using try? on a throwing-optional-returning scenario:</p>
+<pre><code class="swift"><span class="keyword">if</span> <span class="keyword">let</span> int = <span class="keyword">try</span>? mightReturnInt() {
+    <span class="built_in">print</span>(int) <span class="comment">// =&gt; Optional(3)</span>
+}
+
+<span class="keyword">if</span> <span class="keyword">let</span> int = (<span class="keyword">try</span>? mightReturnInt()) ?? <span class="literal">nil</span> {
+    <span class="built_in">print</span>(int) <span class="comment">// =&gt; 3</span>
+}
+</code></pre>
+<p>There’s some magic baked into if let item = item as? T that automatically lifts optionals, which doesn’t yet seem to extend to try?. If you’re running into these situations, consider adding parentheses and nil-coalescing as demonstrated in these examples.</p>
+<p>In case you think a throwing-optional scenario is too “out there”, think of a file system request that would throw on an unreadable directory and return nil if a specific file does not exist. Although obscure, it is not unthinkable to combine the two approaches.</p>
 
       
 
@@ -199,6 +238,11 @@ Options:  -d, –deploy  Deploy after generated  -f, –force   Force regenerate
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+	</div>
+
       
 
       
@@ -328,6 +372,14 @@ Options:  -d, –deploy  Deploy after generated  -f, –force   Force regenerate
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">other</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">iOS</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

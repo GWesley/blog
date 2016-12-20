@@ -47,9 +47,11 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">主页</a></li>
+				<li><a href="/">Home</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/iOS">iOS</a></li>
+	        
+				<li><a href="/tags/other">other</a></li>
 	        
 			</ul>
 		</nav>
@@ -79,7 +81,7 @@
 		        
 					<a class="weibo" target="_blank" href="https://weibo.com/gwesley" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:zzycn2012@gmail.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -107,9 +109,11 @@
 			<nav class="header-menu">
 				<ul>
 				
-					<li><a href="/">主页</a></li>
+					<li><a href="/">Home</a></li>
 		        
-					<li><a href="/tags/随笔/">随笔</a></li>
+					<li><a href="/tags/iOS">iOS</a></li>
+		        
+					<li><a href="/tags/other">other</a></li>
 		        
 		        
 		        	<li><a href="/archives/">所有文章</a></li>
@@ -123,7 +127,7 @@
 			        
 						<a class="weibo" target="_blank" href="https://weibo.com/gwesley" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:zzycn2012@gmail.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -148,7 +152,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/20/test/">Test Post</a>
+      <a class="article-title" href="/2016/12/20/test/">Unexpected precedence issues with try? and as?</a>
     </h1>
   
 
@@ -159,9 +163,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Usage: hexo generate </p>
-<p>Description:<br>Generate static files.</p>
-<p>Options:<br>  -d, –deploy  Deploy after generated<br>  -f, –force   Force regenerate<br>  -w, –watch   Watch file changes</p>
+        <p>Tim Vermeulen recently wrote on the Swift Evolution list that try? precedence can be unexpected:</p>
+<pre><code class="swift"><span class="keyword">if</span> <span class="keyword">let</span> int = <span class="keyword">try</span>? mightReturnInt() <span class="keyword">as</span>? <span class="type">Int</span> {
+
+ <span class="built_in">print</span>(int) <span class="comment">// =&gt; Optional(3)</span>
+
+}
+</code></pre>
+<p>Specifically, he discovered that try?’s precedence is lower than as?’s precedence, so you may have to add parentheses to get the right result.</p>
+<pre><code class="swift"><span class="keyword">if</span> <span class="keyword">let</span> int = (<span class="keyword">try</span>? mightReturnInt()) <span class="keyword">as</span>? <span class="type">Int</span> {
+    <span class="built_in">print</span>(int) <span class="comment">// =&gt; 3</span>
+}
+</code></pre>
+<p>He also found a similar issue with using try? on a throwing-optional-returning scenario:</p>
+<pre><code class="swift"><span class="keyword">if</span> <span class="keyword">let</span> int = <span class="keyword">try</span>? mightReturnInt() {
+    <span class="built_in">print</span>(int) <span class="comment">// =&gt; Optional(3)</span>
+}
+
+<span class="keyword">if</span> <span class="keyword">let</span> int = (<span class="keyword">try</span>? mightReturnInt()) ?? <span class="literal">nil</span> {
+    <span class="built_in">print</span>(int) <span class="comment">// =&gt; 3</span>
+}
+</code></pre>
+<p>There’s some magic baked into if let item = item as? T that automatically lifts optionals, which doesn’t yet seem to extend to try?. If you’re running into these situations, consider adding parentheses and nil-coalescing as demonstrated in these examples.</p>
+<p>In case you think a throwing-optional scenario is too “out there”, think of a file system request that would throw on an unreadable directory and return nil if a specific file does not exist. Although obscure, it is not unthinkable to combine the two approaches.</p>
 
       
 
@@ -170,6 +194,11 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+	</div>
+
       
 
       
@@ -227,6 +256,11 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/other/">other</a></li></ul>
+	</div>
+
       
 
       
@@ -301,6 +335,14 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">other</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">iOS</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
