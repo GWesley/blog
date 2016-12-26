@@ -145,6 +145,116 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-https" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/26/https/">Github Page 自定义域名开启 HTTPS</a>
+    </h1>
+  
+
+        <a href="/2016/12/26/https/" class="archive-article-date">
+  	<time datetime="2016-12-26T03:28:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-26</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>有不少人在使用 Github Pages 搭建自己的博客，不过 Github Pages 目前暂时还不支持自定义域名开启HTTPS，不过幸运的是有一些第三方的服务可以很简单的做到这一点。</p>
+<p>Cloudflare 是一家提供 DNS 和 CDN 服务的公司，你可以简单把他理解为国外的 DNSPod，我们可以使用他们的免费服务 <code>免证书</code> 开启自己博客域名的 HTTPS 访问。</p>
+<p>###步骤如下:</p>
+<ol>
+<li><p>首先去自己域名提供方的站点，修改 Nameservers 为：</p>
+<ul>
+<li>LEAH.NS.CLOUDFLARE.COM </li>
+<li>ZEUS.NS.CLOUDFLARE.COM</li>
+</ul>
+<p>(未来可能修改，具体地址以 Cloudflare 官网提供的地址为准)</p>
+</li>
+</ol>
+<ol>
+<li><p>登陆 <a href="https://www.cloudflare.com" target="_blank" rel="external">Cloudflare 官网</a></p>
+<p>进入顶部的 <code>Crypto</code> 选项，在这里我们选择 <code>FULL</code></p>
+<p><img src="https://blog.cloudflare.com/content/images/2016/06/T08btVu.png" alt=""></p>
+</li>
+</ol>
+<p>​    进入顶部的 <code>Page Rules</code> 选项，点击<code>Create Page Rule</code> 新建页面规则</p>
+<p>​    </p>
+<p>​    先创建第一条规则，强制使用HTTPS</p>
+<p>  <img src="http://ww1.sinaimg.cn/large/5ff914a8jw1fb48vci14fj218u0pyjv1.jpg" alt="">        </p>
+<p>​    再创建第二条规则，转发 <code>www</code> 开头的请求</p>
+<p>  <img src="http://ww1.sinaimg.cn/large/5ff914a8jw1fb48za1ntlj21900sk789.jpg" alt=""></p>
+<p>​    </p>
+<p>DONE ! </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/26/https/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-new_file_extention" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>title: NSCalendar Additions<br>author: Nate Cook<br>translator: GWesley<br>tags: iOS<br>excerpt: “ <code>NSCalendar</code> 已经悄悄的构建了大量的方法方便大家获取和操作日期。 从全新的日期组件存取与日期比较方法，到强大的日期插值与枚举方法，有太多的东西被我们忽视了。接下来让我们抽点时间来了解一下吧。”</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/22/new_file_extention/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-nscalendar_addition" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

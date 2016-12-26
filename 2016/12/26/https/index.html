@@ -6,14 +6,34 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://gwesley.tk">
-  <title>Archives | GWesley&#39;s Blog</title>
+  <title>Github Page 自定义域名开启 HTTPS | GWesley&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="GWesley's Blog">
-<meta property="og:url" content="http://gwesley.tk/archives/index.html">
+  <meta name="description" content="有不少人在使用 Github Pages 搭建自己的博客，不过 Github Pages 目前暂时还不支持自定义域名开启HTTPS，不过幸运的是有一些第三方的服务可以很简单的做到这一点。
+Cloudflare 是一家提供 DNS 和 CDN 服务的公司，你可以简单把他理解为国外的 DNSPod，我们可以使用他们的免费服务 免证书 开启自己博客域名的 HTTPS 访问。
+###步骤如下:
+
+首先去自">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github Page 自定义域名开启 HTTPS">
+<meta property="og:url" content="http://gwesley.tk/2016/12/26/https/index.html">
 <meta property="og:site_name" content="GWesley's Blog">
+<meta property="og:description" content="有不少人在使用 Github Pages 搭建自己的博客，不过 Github Pages 目前暂时还不支持自定义域名开启HTTPS，不过幸运的是有一些第三方的服务可以很简单的做到这一点。
+Cloudflare 是一家提供 DNS 和 CDN 服务的公司，你可以简单把他理解为国外的 DNSPod，我们可以使用他们的免费服务 免证书 开启自己博客域名的 HTTPS 访问。
+###步骤如下:
+
+首先去自">
+<meta property="og:image" content="https://blog.cloudflare.com/content/images/2016/06/T08btVu.png">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/5ff914a8jw1fb48vci14fj218u0pyjv1.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/5ff914a8jw1fb48za1ntlj21900sk789.jpg">
+<meta property="og:updated_time" content="2016-12-26T07:59:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GWesley's Blog">
+<meta name="twitter:title" content="Github Page 自定义域名开启 HTTPS">
+<meta name="twitter:description" content="有不少人在使用 Github Pages 搭建自己的博客，不过 Github Pages 目前暂时还不支持自定义域名开启HTTPS，不过幸运的是有一些第三方的服务可以很简单的做到这一点。
+Cloudflare 是一家提供 DNS 和 CDN 服务的公司，你可以简单把他理解为国外的 DNSPod，我们可以使用他们的免费服务 免证书 开启自己博客域名的 HTTPS 访问。
+###步骤如下:
+
+首先去自">
+<meta name="twitter:image" content="https://blog.cloudflare.com/content/images/2016/06/T08btVu.png">
   
     <link rel="alternative" href="/atom.xml" title="GWesley&#39;s Blog" type="application/atom+xml">
   
@@ -143,134 +163,176 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-https" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Github Page 自定义域名开启 HTTPS
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/26/https/" class="archive-article-date">
+
+        <a href="/2016/12/26/https/" class="archive-article-date">
   	<time datetime="2016-12-26T03:28:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-26</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/26/https/">Github Page 自定义域名开启 HTTPS</a>
-    </h1>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>有不少人在使用 Github Pages 搭建自己的博客，不过 Github Pages 目前暂时还不支持自定义域名开启HTTPS，不过幸运的是有一些第三方的服务可以很简单的做到这一点。</p>
+<p>Cloudflare 是一家提供 DNS 和 CDN 服务的公司，你可以简单把他理解为国外的 DNSPod，我们可以使用他们的免费服务 <code>免证书</code> 开启自己博客域名的 HTTPS 访问。</p>
+<p>###步骤如下:</p>
+<ol>
+<li><p>首先去自己域名提供方的站点，修改 Nameservers 为：</p>
+<ul>
+<li>LEAH.NS.CLOUDFLARE.COM </li>
+<li>ZEUS.NS.CLOUDFLARE.COM</li>
+</ul>
+<p>(未来可能修改，具体地址以 Cloudflare 官网提供的地址为准)</p>
+</li>
+</ol>
+<ol>
+<li><p>登陆 <a href="https://www.cloudflare.com" target="_blank" rel="external">Cloudflare 官网</a></p>
+<p>进入顶部的 <code>Crypto</code> 选项，在这里我们选择 <code>FULL</code></p>
+<p><img src="https://blog.cloudflare.com/content/images/2016/06/T08btVu.png" alt=""></p>
+</li>
+</ol>
+<p>​    进入顶部的 <code>Page Rules</code> 选项，点击<code>Create Page Rule</code> 新建页面规则</p>
+<p>​    </p>
+<p>​    先创建第一条规则，强制使用HTTPS</p>
+<p>  <img src="http://ww1.sinaimg.cn/large/5ff914a8jw1fb48vci14fj218u0pyjv1.jpg" alt="">        </p>
+<p>​    再创建第二条规则，转发 <code>www</code> 开头的请求</p>
+<p>  <img src="http://ww1.sinaimg.cn/large/5ff914a8jw1fb48za1ntlj21900sk789.jpg" alt=""></p>
+<p>​    </p>
+<p>DONE ! </p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃辣条<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://gwesley.tk/2016/12/26/https/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/22/new_file_extention/" class="archive-article-date">
-  	<time datetime="2016-12-22T08:22:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-22</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/20/nscalendar_addition/" class="archive-article-date">
-  	<time datetime="2016-12-20T07:53:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-20</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/20/nscalendar_addition/">NSCalendar Additions</a>
-    </h1>
   
+    <a href="/2016/12/22/new_file_extention/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/20/test/" class="archive-article-date">
-  	<time datetime="2016-12-20T06:19:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/20/test/">Unexpected precedence issues with try? and as?</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="https" data-title="Github Page 自定义域名开启 HTTPS" data-url="http://gwesley.tk/2016/12/26/https/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"gwesley"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-    
+
 
 
           </div>
@@ -293,8 +355,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
