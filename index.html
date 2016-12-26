@@ -182,7 +182,6 @@
 </li>
 </ol>
 <p>​    进入顶部的 <code>Page Rules</code> 选项，点击<code>Create Page Rule</code> 新建页面规则</p>
-<p>​    </p>
 <p>​    先创建第一条规则，强制使用HTTPS</p>
 <p>  <img src="http://ww1.sinaimg.cn/large/5ff914a8jw1fb48vci14fj218u0pyjv1.jpg" alt="">        </p>
 <p>​    再创建第二条规则，转发 <code>www</code> 开头的请求</p>
@@ -202,42 +201,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/12/26/https/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-new_file_extention" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>title: NSCalendar Additions<br>author: Nate Cook<br>translator: GWesley<br>tags: iOS<br>excerpt: “ <code>NSCalendar</code> 已经悄悄的构建了大量的方法方便大家获取和操作日期。 从全新的日期组件存取与日期比较方法，到强大的日期插值与枚举方法，有太多的东西被我们忽视了。接下来让我们抽点时间来了解一下吧。”</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/22/new_file_extention/">展开全文 >></a>
         </p>
       
 
@@ -486,82 +449,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/12/20/nscalendar_addition/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/20/test/">Unexpected precedence issues with try? and as?</a>
-    </h1>
-  
-
-        <a href="/2016/12/20/test/" class="archive-article-date">
-  	<time datetime="2016-12-20T06:19:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-20</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Tim Vermeulen recently wrote on the Swift Evolution list that try? precedence can be unexpected:</p>
-<pre><code class="swift"><span class="keyword">if</span> <span class="keyword">let</span> int = <span class="keyword">try</span>? mightReturnInt() <span class="keyword">as</span>? <span class="type">Int</span> {
-
- <span class="built_in">print</span>(int) <span class="comment">// =&gt; Optional(3)</span>
-
-}
-</code></pre>
-<p>Specifically, he discovered that try?’s precedence is lower than as?’s precedence, so you may have to add parentheses to get the right result.</p>
-<pre><code class="swift"><span class="keyword">if</span> <span class="keyword">let</span> int = (<span class="keyword">try</span>? mightReturnInt()) <span class="keyword">as</span>? <span class="type">Int</span> {
-    <span class="built_in">print</span>(int) <span class="comment">// =&gt; 3</span>
-}
-</code></pre>
-<p>He also found a similar issue with using try? on a throwing-optional-returning scenario:</p>
-<pre><code class="swift"><span class="keyword">if</span> <span class="keyword">let</span> int = <span class="keyword">try</span>? mightReturnInt() {
-    <span class="built_in">print</span>(int) <span class="comment">// =&gt; Optional(3)</span>
-}
-
-<span class="keyword">if</span> <span class="keyword">let</span> int = (<span class="keyword">try</span>? mightReturnInt()) ?? <span class="literal">nil</span> {
-    <span class="built_in">print</span>(int) <span class="comment">// =&gt; 3</span>
-}
-</code></pre>
-<p>There’s some magic baked into if let item = item as? T that automatically lifts optionals, which doesn’t yet seem to extend to try?. If you’re running into these situations, consider adding parentheses and nil-coalescing as demonstrated in these examples.</p>
-<p>In case you think a throwing-optional scenario is too “out there”, think of a file system request that would throw on an unreadable directory and return nil if a specific file does not exist. Although obscure, it is not unthinkable to combine the two approaches.</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/20/test/">展开全文 >></a>
         </p>
       
 
