@@ -596,8 +596,7 @@ body,button,input,select,textarea{
 }
 body{
     overflow-y:hidden;
-    background:#eaeaea;
-    opacity: 0.5;
+    background:#eaeaea
 }
 #container,body,html{
     height:100%;

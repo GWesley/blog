@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://gwesley.tk/"/>
+  <link href="http://yoursite.com/"/>
   <updated>2016-12-26T09:04:06.000Z</updated>
-  <id>http://gwesley.tk/</id>
+  <id>http://yoursite.com/</id>
   
   <author>
     <name>GWesley</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Github Page 自定义域名开启 HTTPS</title>
-    <link href="http://gwesley.tk/2016/12/26/https/"/>
-    <id>http://gwesley.tk/2016/12/26/https/</id>
+    <link href="http://yoursite.com/2016/12/26/https/"/>
+    <id>http://yoursite.com/2016/12/26/https/</id>
     <published>2016-12-26T03:28:00.000Z</published>
     <updated>2016-12-26T09:04:06.000Z</updated>
     
@@ -67,8 +67,8 @@
   
   <entry>
     <title>NSCalendar Additions</title>
-    <link href="http://gwesley.tk/2016/12/20/nscalendar_addition/"/>
-    <id>http://gwesley.tk/2016/12/20/nscalendar_addition/</id>
+    <link href="http://yoursite.com/2016/12/20/nscalendar_addition/"/>
+    <id>http://yoursite.com/2016/12/20/nscalendar_addition/</id>
     <published>2016-12-20T07:53:14.000Z</published>
     <updated>2016-12-20T08:16:00.000Z</updated>
     
@@ -276,7 +276,7 @@
     </summary>
     
     
-      <category term="iOS" scheme="http://gwesley.tk/tags/iOS/"/>
+      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
     
   </entry>
   
